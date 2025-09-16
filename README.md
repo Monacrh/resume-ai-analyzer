@@ -25,7 +25,7 @@ git clone
 ```
 
 ```bash
-npm install
+npm install https://github.com/Monacrh/resume-ai-analyzer.git
 ```
 
 ### Development
