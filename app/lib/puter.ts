@@ -328,32 +328,40 @@ export const usePuterStore = create<PuterStore>((set, get) => {
   };
 
   const feedback = async (path: string, message: string) => {
+  try {
+    console.log('Starting AI request with path:', path);
+    console.log('Message length:', message.length);
+    
     const puter = getPuter();
     if (!puter) {
-      setError("Puter.js not available");
-      return;
+      throw new Error("Puter.js not available");
     }
 
-    return puter.ai.chat(
+    console.log('Calling puter.ai.chat...');
+    const response = await puter.ai.chat(
       [
         {
           role: "user",
           content: [
-            {
-              type: "file",
-              puter_path: path,
-            },
-            {
-              type: "text",
-              text: message,
-            },
+            { type: "file", puter_path: path },
+            { type: "text", text: message },
           ],
         },
       ],
-      // { model: "claude-sonnet-4" }
-      { model: "claude-3-7-sonnet" }
-    ) as Promise<AIResponse | undefined>;
-  };
+      { model: "gpt-4o-mini" }
+    );
+
+    console.log('AI response received:', response);
+    return response as AIResponse;
+  } catch (error) {
+    console.error("Detailed Puter AI Error:", error);
+    // Log the full error object
+    console.error("Error details:", JSON.stringify(error, null, 2));
+    throw error; // Re-throw to handle in the calling function
+  }
+};
+
+ 
 
   const img2txt = async (image: string | File | Blob, testMode?: boolean) => {
     const puter = getPuter();
