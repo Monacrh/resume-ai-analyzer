@@ -21,11 +21,11 @@ A modern, production-ready template for building full-stack React applications u
 Install the dependencies:
 
 ```bash
-git clone 
+git clone https://github.com/Monacrh/resume-ai-analyzer.git
 ```
 
 ```bash
-npm install https://github.com/Monacrh/resume-ai-analyzer.git
+npm install
 ```
 
 ### Development
