@@ -61,6 +61,11 @@ docker run -p 3000:3000 resume-analyzer
 ###🎨 Styling
 This project uses Tailwind CSS for styling. You can easily customize the design or switch to your preferred CSS framework.
 
-###🤝 Contributing & Credit
+### 🙌 Credits
+- Developed by [Monacrh](https://github.com/Monacrh)
+- Powered by [Puter.js](https://puter.com/) & Claude Sonnet 4
+- Inspired by [JavaScript Mastery](https://github.com/adrianhajdin)
+
+###🤝 Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
-Credit = https://youtu.be/iYOz165wGkQ?si=U0D3Z1YEdJ5LCMnP
+
