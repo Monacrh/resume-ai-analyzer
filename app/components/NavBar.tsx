@@ -1,7 +1,6 @@
-import React from 'react'
 import { Link } from 'react-router'
 
-const NavBar = () => {
+const Navbar = () => {
   return (
     <nav className='navbar py-4 px-8 flex justify-between items-center bg-white border-b-4 border-black'>
         <Link to="/">
@@ -14,4 +13,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default Navbar
