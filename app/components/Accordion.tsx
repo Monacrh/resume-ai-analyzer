@@ -1,6 +1,5 @@
-// Accordion.tsx
 import type { ReactNode } from "react";
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useRef, useEffect } from "react";
 import { cn } from "~/lib/utils";
 
 interface AccordionContextType {
@@ -154,16 +153,29 @@ export const AccordionContent: React.FC<AccordionContentProps> = ({
 }) => {
     const { isItemActive } = useAccordion();
     const isActive = isItemActive(itemId);
+    const contentRef = useRef<HTMLDivElement>(null);
+    const [maxHeight, setMaxHeight] = useState<string>("0px");
+
+    useEffect(() => {
+        if (isActive && contentRef.current) {
+            setMaxHeight(`${contentRef.current.scrollHeight}px`);
+        } else {
+            setMaxHeight("0px");
+        }
+    }, [isActive]);
 
     return (
         <div
+            ref={contentRef}
             className={cn(
                 "overflow-hidden transition-all duration-300 bg-orange-50 border-t-4 border-black",
-                isActive ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
                 className
             )}
+            style={{ maxHeight }}
         >
-            <div className="px-4 py-3 font-mono">{children}</div>
+            <div className="px-4 py-3 font-mono overflow-y-auto">
+                {children}
+            </div>
         </div>
     );
 };

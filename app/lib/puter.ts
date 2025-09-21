@@ -348,7 +348,8 @@ export const usePuterStore = create<PuterStore>((set, get) => {
           ],
         },
       ],
-      { model: "gpt-4o-mini" }
+      // { model: "gpt-4o-mini" }
+      { model: "claude-sonnet-4" }
     );
 
     console.log('AI response received:', response);
