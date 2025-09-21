@@ -1,91 +1,66 @@
-# Welcome to React Router!
+# 📄 AI-Powered Resume Analyzer Website
 
-A modern, production-ready template for building full-stack React applications using React Router.
+🚀 An AI-powered web application to help job seekers optimize their resumes and improve their chances of passing ATS (Applicant Tracking Systems).
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+🔗 **Live Demo:** [resume-ai-analyzer-eosin.vercel.app](https://resume-ai-analyzer-eosin.vercel.app/)
 
-## Features
+---
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## ✨ Features
 
-## Getting Started
+- ✅ Upload & analyze resumes/CVs with AI
+- ✅ Simulate ATS scoring against job descriptions
+- ✅ Get actionable insights & recommendations for improvement
+- ✅ Modern and responsive UI
 
-### Installation
+---
 
-Install the dependencies:
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js  
+- **Backend & AI Orchestration:** [Puter.js](https://puter.com/)  
+- **AI Model:** Claude Sonnet 4  
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/Monacrh/resume-ai-analyzer.git
+cd resume-ai-analyzer
 ```
 
+### 1️⃣ Clone the repository
 ```bash
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
-
+### 2️⃣ Install dependencies
 ```bash
 npm run dev
 ```
+App will be available at: http://localhost:5173
 
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
+### 🏗️ Building for Production
 ```bash
 npm run build
 ```
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
+### 📦 Deployment
 
 ```bash
-docker build -t my-app .
+# Build Docker image
+docker build -t resume-analyzer .
 
 # Run the container
-docker run -p 3000:3000 my-app
+docker run -p 3000:3000 resume-analyzer
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+###🎨 Styling
+This project uses Tailwind CSS for styling. You can easily customize the design or switch to your preferred CSS framework.
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+###🤝 Contributing & Credit
+Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
+Credit = https://youtu.be/iYOz165wGkQ?si=U0D3Z1YEdJ5LCMnP
